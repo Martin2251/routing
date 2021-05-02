@@ -14,12 +14,14 @@ function Shop() {
     );
 
     const items = await data.json();
-    console.log(items);
-    setItems(items);
+    console.log(items.items);
+    setItems(items.items);
   };
   return (
     <div>
-      <h1>Shop Page </h1>
+      {items.map((item => (
+        <h1>{item.name}</h1>
+      ))}
     </div>
   );
 }
