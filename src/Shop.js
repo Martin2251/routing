@@ -9,7 +9,9 @@ function Shop() {
   const [items, setItems] = useState([]);
 
   const fetchItems = async () => {
-    const data = await fetch("https://fortnite-api.com/v2/shop/br");
+    const data = await fetch(
+      "https://fortnite-api.theapinetwork.com/store/get"
+    );
 
     const items = await data.json();
     console.log(items);
